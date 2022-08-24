@@ -67,5 +67,5 @@ public class AllureTest {
         steps.ClickOnIssues();
         steps.FindIssueByName(issueName);
     }
-}git
+}
 
