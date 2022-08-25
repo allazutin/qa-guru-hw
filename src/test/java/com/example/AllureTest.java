@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.codeborne.selenide.selector.ByText;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -17,9 +18,13 @@ public class AllureTest {
     String projectName = "allure-framework/allure-java";
     String issueName = "Ability to choose the position of attachments";
 
+    @BeforeAll
+    static void enableAllure() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+    }
+
     @Test
     void selenideTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         // открыть github
         open(url);
@@ -35,7 +40,6 @@ public class AllureTest {
 
     @Test
     void lambdaTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открываем сайт " + url, () -> {
             open(url);
@@ -63,9 +67,9 @@ public class AllureTest {
         AllureSteps steps = new AllureSteps();
         steps.openMainPage(url);
         steps.searchByRepoName(projectName);
-        steps.ClickOnRepoByName(projectName);
-        steps.ClickOnIssues();
-        steps.FindIssueByName(issueName);
+        steps.clickOnRepoByName(projectName);
+        steps.clickOnIssues();
+        steps.findIssueByName(issueName);
     }
 }
 

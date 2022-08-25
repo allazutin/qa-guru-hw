@@ -18,17 +18,17 @@ public class AllureSteps {
     }
 
     @Step("Нажимаем на репозиторий {repoName}")
-    public void ClickOnRepoByName(String repoName) {
+    public void clickOnRepoByName(String repoName) {
         $$(".repo-list").findBy(text(repoName)).click();
     }
 
     @Step("Переходим в раздел Issues")
-    public void ClickOnIssues() {
+    public void clickOnIssues() {
         $("#issues-tab").click();
     }
 
     @Step("Проверяем наличие Issues с названием: {issueName}")
-    public void FindIssueByName(String issueName) {
+    public void findIssueByName(String issueName) {
         $$(".Link--primary").findBy(text(issueName));
     }
 
