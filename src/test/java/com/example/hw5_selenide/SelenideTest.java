@@ -1,4 +1,4 @@
-package com.example;
+package com.example.hw5_selenide;
 
 import com.codeborne.selenide.selector.ByText;
 import org.junit.jupiter.api.Test;

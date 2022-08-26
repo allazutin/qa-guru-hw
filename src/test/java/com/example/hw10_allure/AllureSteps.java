@@ -1,7 +1,6 @@
-package com.example;
+package com.example.hw10_allure;
 
 import io.qameta.allure.Step;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 

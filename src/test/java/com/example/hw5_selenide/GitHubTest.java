@@ -1,4 +1,4 @@
-package com.example;
+package com.example.hw5_selenide;
 
 import org.junit.jupiter.api.Test;
 

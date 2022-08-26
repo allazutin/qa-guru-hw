@@ -1,4 +1,4 @@
-package com.example;
+package com.example.hw8_junit;
 
 import com.codeborne.selenide.CollectionCondition;
 import org.junit.jupiter.api.Test;
