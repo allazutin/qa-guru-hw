@@ -10,7 +10,7 @@ allure {
     report {
         version.set("2.19.0")
     }
-    adapter { // отвечает за появление папочки build/allure-results
+     adapter { // отвечает за появление папочки build/allure-results
         aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
             junit5 { //название фреймворка
@@ -29,7 +29,11 @@ dependencies {
     testImplementation (
             'org.junit.jupiter:junit-jupiter:5.9.0',
             'com.codeborne:selenide:6.7.2',
-            'io.qameta.allure:allure-selenide:2.19.0'
+            'io.qameta.allure:allure-selenide:2.19.0',
+            'org.assertj:assertj-core:3.23.1',
+            'com.codeborne:pdf-test:1.5.0',
+            'com.codeborne:xls-test:1.4.3',
+            'com.opencsv:opencsv:5.6'
     )
 }
 

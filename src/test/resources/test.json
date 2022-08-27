@@ -1,0 +1,7 @@
+{
+  "name": "Alexey",
+  "mobile": "+79001234567",
+  "married": true,
+  "pets": ["Dog", "cat"],
+  "country": "RU"
+}
